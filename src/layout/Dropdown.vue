@@ -10,7 +10,7 @@
                     <p> {{ user.name }} </p>
                     <p> {{ user.email }} </p>
                 </div>
-               <p><router-link  to="/login">Browse</router-link></p>
+               <p><router-link  to="/browse">Browse</router-link></p>
                <p><router-link  to="/login">Log out</router-link></p>
             </div>
         </div>
