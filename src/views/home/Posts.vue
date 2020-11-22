@@ -2,30 +2,22 @@
     <div class="post">
         <div class="post-author">
             <span class="post-author-info">
-                <img :src="author.avatar" alt="Post author">
+                <img :src='author.avatar' :alt='author.firstname + " " + author.lastname'>
                 <small>
-                    {{ author.firstname }} {{ author.lastname }}
+                    {{ author.firstname | capitalLetter }} {{ author.lastname | capitalLetter }}
                 </small>
             </span>
-            <small>
-                {{ createTime }}
-            </small>
+            <small>{{ createTime }}</small>
         </div>
-
         <div class="post-image">
             <img v-if="media && media.type == 'image'" :src="media.url" alt="" />
             <video v-if="media && media.type == 'video'" :src="media.url" width="100%" controls />
         </div>
-
         <div class="post-title">
-            <h3>
-                {{ text | capitalLetter }}
-            </h3>
+            <h3>{{ text }}</h3>
         </div>
-
         <div class="post-actions">
-            <button type="button" name="like" class="like-button" v-bind:class="{ liked: likedPost }" @click="likePost">
-                {{ likes }}
+            <button type="button" class="like-button" v-bind:class="{ liked: likedPost }" @click="likePost">{{ likes }}
             </button>
         </div>
     </div>
@@ -134,7 +126,7 @@ export default {
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: 5px center;
-    background-color: #8a8a8a;
+    background-color: grey;
     width: 60px;
     height: 25px;
     padding-left: 23px;
