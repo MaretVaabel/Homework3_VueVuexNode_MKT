@@ -14,8 +14,7 @@ const routes = [
     path: '/base',
     component: () => import('../layout/Base.vue'),
     children: [ 
-      { path: '', component: () => import('../views/home/Posts.vue') },
-      { path: 'details/:idProduct', component: () => import('../views/home/Details.vue') },
+      { path: '/posts', component: () => import('../views/home/Posts.vue') },
       { path: '/browse', component: () => import('../views/home/Browse.vue') },
     ]
   },

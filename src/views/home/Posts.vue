@@ -1,48 +1,50 @@
 <template>
-    <div class="post">
-        <div class="post-author">
-            <span class="post-author-info">
-                <img :src='author.avatar' :alt='author.firstname + " " + author.lastname'>
-                <small>
-                    {{ author.firstname | capitalLetter }} {{ author.lastname | capitalLetter }}
-                </small>
-            </span>
-            <small>{{ createTime }}</small>
-        </div>
-        <div class="post-image">
-            <img v-if="media && media.type == 'image'" :src="media.url" alt="" />
-            <video v-if="media && media.type == 'video'" :src="media.url" width="100%" controls />
-        </div>
-        <div class="post-title">
-            <h3>{{ text }}</h3>
-        </div>
-        <div class="post-actions">
-            <button type="button" class="like-button" v-bind:class="{ liked: likedPost }" @click="likePost">{{ likes }}
-            </button>
-        </div>
-    </div>
+    <div class="container">
+        <div v-for='post in posts' :key='post.id'>
+            <div class="post">
+                <div class="post">
+                    <div class="post-author">
+                        <span class="post-author-info">
+                            <img :src='post.author.avatar' :alt='post.author.firstname + " " + post.author.lastname'>
+                            <small>
+                                {{ post.author.firstname | capitalLetter }} {{ post.author.lastname | capitalLetter }}
+                            </small>
+                        </span>
+                        <small>{{ post.createTime }}</small>
+                    </div>
+                    <div class="post-image">
+                        <img v-if="post.media && post.media.type == 'image'" :src="post.media.url" alt="" />
+                        <video v-if="post.media && post.media.type == 'video'" :src="post.media.url" width="100%" controls />
+                    </div>
+                    <div class="post-title">
+                        <h3>{{ post.text }}</h3>
+                    </div>
+                    <div class="post-actions">
+                        <button type="button" class="like-button" v-bind:class="{ liked: likedPost }" @click="likePost">{{ post.likes }}
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+     </div>            
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
     name: 'Posts',
-    props: {    
-        author: Object,
-        createTime: String,
-        text: String,
-        media: Object,
-        likes: String,
-    },
-    data: function () {
+    data () {
         return {
             likedPost: false,
         }
     },
     methods: {
-        likePost : function() {
+        likePost () {
             this.likedPost = !this.likedPost;
-        }
+        },
+        ...mapGetters("posts", ["posts"])
     },
+    
     filters: {
         capitalLetter: function(string) {
             if (!string) return ''
@@ -57,6 +59,14 @@ export default {
 </script>
 
 <style>
+.container {
+    width: 80%;
+    min-height: 100%;
+    margin: auto auto;
+    padding: 90px 15px 15px 15px;
+    background-color: white;
+}
+
 .post {
     width: 80%;
     margin: 15px auto;

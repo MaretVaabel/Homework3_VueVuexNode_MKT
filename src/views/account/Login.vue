@@ -48,6 +48,7 @@ export default {
   },
   methods: {
     ...mapActions("account", ["login"]),
+    ...mapActions("posts", ["posts"])
     //  goIn() {
     //     this.$router.push('/base');
              
