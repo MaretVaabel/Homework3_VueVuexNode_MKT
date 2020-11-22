@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import account from './account'
-import posts from './posts'
+import Vue from "vue"
+import Vuex from "vuex"
+import account from "./account"
+import posts from "./posts"
 
 Vue.use(Vuex)
 

@@ -1,30 +1,27 @@
 <template>
-  <div id="app">
-     
+  <div id = "app">
         <router-view />
-      
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app',
+  name: "app",
 }
 </script>
 
 <style>
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box; 
 }
 
 body {
-  font-family: 'montserrat', sans-serif;
-  background-color: #0277bd;
-  color: #263238;
+  font-family: 'Open Sans', sans-serif;
+  background-color: dodgerblue;
+  color: darkslategray;
 }
-
 </style>
 

@@ -1,6 +1,6 @@
 export default function () {
     return {
-      posts: [],
-      post: {}
+        post: {},
+        posts: [],
     }
   }

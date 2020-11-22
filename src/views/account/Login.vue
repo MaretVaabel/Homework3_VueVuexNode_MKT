@@ -1,34 +1,34 @@
 <template>
   <div>
-    <div class="container" style="padding-top: 10%">
-      <div class="row d-flex justify-content-center">
-        <div class="col-6 text-left login-form-container">
-          <div class="d-flex justify-content-center">
-            <img src="../../assets/logo.png" width="150" alt/>
+    <div class = "container" style = "padding-top: 10%">
+      <div class = "row d-flex justify-content-center">
+        <div class = "col-6 text-left login-form-container">
+          <div class = "d-flex justify-content-center">
+            <img src = "../../assets/logo.png" width = "175" alt/>
           </div>
-           <div class="text-center">
+           <div class = "text-center">
             <h3>Welcome to postIt!</h3>
           </div>
           <div>
-            <div class="form-group">
-              <h4 class="text-center p-4">Please Log In</h4>
+            <div class = "form-group">
+              <h4 class = "text-center p-4">Please Log In</h4>
               
               <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Email"
+                type = "email"
+                class = "form-control"
+                id = "exampleInputEmail1"
+                aria-describedby = "emailHelp"
+                placeholder = "Email"
               />
               <small
-                id="emailHelp"
-                class="form-text text-muted"
+                id = "emailHelp"
+                class = "form-text text-muted"
               >We'll never share your email with anyone else.</small>
             </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+            <div class = "form-group">
+              <input type = "password" class = "form-control" id = "exampleInputPassword1" placeholder = "Password"/>
             </div>
-            <button @click="login() && (isClicked=true)" :status="isClicked" type="submit" class="btn btn-primary btn-block">Login</button>
+            <button @click = "login() && (isClicked = true)" :status = "isClicked" type = "submit" class = "btn btn-primary btn-block">Login</button>
             
           </div>
         </div>
@@ -48,10 +48,6 @@ export default {
   },
   methods: {
     ...mapActions("account", ["login"]),
-    //  goIn() {
-    //     this.$router.push('/base');
-             
-    //        }
   },
 };
 </script>
@@ -63,10 +59,10 @@ export default {
 .login-form-container {
   background-color: white;
   padding: 20px;
-  box-shadow: 0px 2px 5px 2px #888888;
+  box-shadow: 0px 2px 5px 2px grey;
 }
 .btn:hover {
-  background: #00b4b4;
+  background: lightskyblue;
 }
 .btn:focus {
   background: teal;

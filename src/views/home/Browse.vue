@@ -1,9 +1,9 @@
 <template>
-  <section class="profile-container">
-    <div class="profile" v-for="user in users" :key="user.id">
-      <img :src="user.avatar" :alt="user.firstname + ' ' + user.lastname">
-      <h4> {{ user.firstname }} {{ user.lastname }} </h4>
-      <button class="follow-button" :id="user.id" @click="toggleFollow(user.id)">Follow</button>
+  <section class = "main-container">
+    <div class = "profile" v-for="user in users" :key="user.id">
+      <img :src = "user.avatar" :alt = "user.firstName + ' ' + user.lastName">
+      <h4> {{ user.firstName }} {{ user.lastName }} </h4>
+      <button class = "follow-button" :id = "user.id" @click = "toggleFollow(user.id)">Follow</button>
     </div>
   </section>
 </template>
@@ -16,7 +16,7 @@ export default {
   methods: {
     toggleFollow(id) {
       let el = document.getElementById(id);
-      if (el.innerHTML == "Follow") {
+      if (el.innerHTML === "Follow") {
         el.innerHTML = "Followed"
       } else {
         el.innerHTML = "Follow"
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 <style scoped>
-.profile-container {
+.main-container {
   display: flex;
   width: 50%;
   min-height: 100%;
@@ -45,11 +45,11 @@ export default {
   flex-flow: row wrap;
 }
 .profile {
-  width: 40%;
+  width: 41%;
   max-width: 300px;
   display: flex;
-  border: 1px solid white;w
-border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
   align-items: center;
   flex-direction: column;
   margin: 15px auto;

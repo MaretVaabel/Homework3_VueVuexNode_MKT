@@ -2,6 +2,6 @@
 
 export default function () {
     return {
-      userData: {},
+      userData: {}, profiles: {}
     }
   }

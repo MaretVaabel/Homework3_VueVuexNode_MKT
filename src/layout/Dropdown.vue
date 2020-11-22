@@ -1,17 +1,16 @@
 <template>
-    <div class="menu-item" @click="isOpen = !isOpen">
-        <a href="#">
-            <img :src="user.avatar" alt/>
+    <div class = "menu-item" @click = "isOpen = !isOpen">
+        <a href = "#">
+            <img :src = "user.avatar" alt/>
         </a>
-        <transition name='fade' appear>
-        <div class="sub-menu" v-if="isOpen">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <p> {{ user.name }} </p>
-                    <p> {{ user.email }} </p>
+        <transition name = "fade" appear>
+        <div class = "sub-menu" v-if = "isOpen">
+            <div class = "menu-item">
+                <div class = "menu-info">
+                  <p> {{ user.name }} {{ user.email }} </p>
                 </div>
-               <p><router-link  to="/login">Browse</router-link></p>
-               <p><router-link  to="/login">Log out</router-link></p>
+               <p><router-link  to = "/browse">Browse</router-link></p>
+               <p><router-link  to = "/login">Log out</router-link></p>
             </div>
         </div>
         </transition>
@@ -48,14 +47,6 @@ nav .menu-item .sub-menu {
 
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: all .5s ease-out;
-}
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
-}
 img {
     height: 50px;
     width: 50px;
