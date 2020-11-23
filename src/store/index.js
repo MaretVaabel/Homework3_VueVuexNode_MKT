@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import Vue from 'vue'
 import Vuex from 'vuex'
 import account from './account'
@@ -17,3 +18,5 @@ export default function () {
   })
   return Store
 }
+=======
+>>>>>>> Stashed changes
