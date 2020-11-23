@@ -1,50 +1,25 @@
 <template>
   <div id="app">
-<<<<<<< Updated upstream
-     
-        <router-view />
-      
-=======
     <Navbar/>
     <router-view/>
->>>>>>> Stashed changes
   </div>
 </template>
 <script>
 import Navbar from './components/Navbar'
 export default {
-<<<<<<< Updated upstream
-  name: 'app',
-=======
   name: "app",
   components: {
     Navbar
   }
->>>>>>> Stashed changes
 }
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Literata&display=swap");
 * {
-<<<<<<< Updated upstream
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
-=======
   font-family: "Literata", serif;
   outline: none;
->>>>>>> Stashed changes
 }
 body {
-<<<<<<< Updated upstream
-  font-family: 'montserrat', sans-serif;
-  background-color: #0277bd;
-  color: #263238;
-}
-
-</style>
-
-=======
   background-color: dodgerblue;
 }
 #app {
@@ -67,4 +42,3 @@ button:hover {
   cursor: pointer;
 }
 </style>
->>>>>>> Stashed changes
